@@ -3,11 +3,11 @@
 //
 
 #ifndef VULKANINSTACE_H
-#define VULKANINSTACE_H
+#define VULKANINSTANCE_H
 
 namespace lum
 {
-    class VulkanInstace
+    class VulkanInstance
     {
     public:
         void cleanup();
@@ -15,4 +15,4 @@ namespace lum
     };
 }
 
-#endif //VULKANINSTACE_H
+#endif //VULKANINSTANCE_H

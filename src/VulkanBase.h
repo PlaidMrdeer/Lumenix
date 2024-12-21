@@ -5,7 +5,7 @@
 #ifndef VULKANBASE_H
 #define VULKANBASE_H
 
-#include "vulkan/VulkanInstace.h"
+#include "vulkan/VulkanInstance.h"
 #include "vulkan/VulkanPhysicalDevice.h"
 #include "vulkan/VulkanDevice.h"
 
@@ -21,7 +21,7 @@ namespace lum
         void pickPhysicalDevice();
         void createDevice();
     private:
-        VulkanInstace *instace = nullptr;
+        VulkanInstance *instance = nullptr;
         VulkanPhysicalDevice *physicalDevice = nullptr;
         VulkanDevice *device = nullptr;
 
