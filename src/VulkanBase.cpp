@@ -28,7 +28,7 @@ void lum::VulkanBase::createDevice()
 
 void lum::VulkanBase::cleanup() const
 {
-    instace->cleanup();
+    instance->cleanup();
     physicalDevice->cleanup();
     device->cleanup();
 }
