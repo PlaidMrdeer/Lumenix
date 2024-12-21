@@ -10,6 +10,7 @@ file(GLOB_RECURSE SOURCE
 )
 add_library(Lumenix SHARED ${SOURCE})
 include_directories(include)
+include_directories(src)
 
 add_subdirectory(examples)
 
@@ -24,7 +25,9 @@ FetchContent_Declare(
         GIT_REPOSITORY https://github.com/g-truc/glm.git
         GIT_TAG 1.0.1
 )
+
 FetchContent_MakeAvailable(glfw glm)
 
-find_package(OpenGL REQUIRED)
-target_link_libraries(Lumenix PRIVATE glfw glm OpenGL)
+find_package(Vulkan REQUIRED)
+target_link_libraries(Lumenix PUBLIC glfw glm::glm Vulkan::Vulkan)
+target_include_directories(Lumenix PUBLIC ${glfw_SOURCE_DIR}/include)

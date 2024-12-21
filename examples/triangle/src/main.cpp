@@ -1,9 +1,16 @@
 //
 // Created by plaidmrdeer on 2024/12/20.
 //
-#include <library.h>
+#include <lum/init.h>
+
+#include <lum/window.h>
 
 int main()
 {
-    hello();
+
+    lum::init();
+
+    lum::window window{1920, 1080, "Triangle"};
+    window.create();
+    window.loop();
 }
